@@ -1,0 +1,13 @@
+<div class="img-box" *ngIf="imgList">
+  <div class="img-box-pro">
+    <div *ngFor="let img of imgList,let i = index" class="pic-outbox">
+      <div class="pic-box">
+        <img [src]='img' (click)="picturePreview(i)" />
+      </div>
+      <img src="./assets/imgs/component/cancel.png" class="cancel-img" (click)="deletePicture(i)" *ngIf="allowDelete">
+    </div>
+    <div class="add-btn" (click)="addPicture()" *ngIf="imgList.length<max&&allowAdd">
+      <img src="./assets/imgs/component/add.png" />
+    </div>
+  </div>
+</div>

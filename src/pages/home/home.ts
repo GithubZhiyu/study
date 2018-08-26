@@ -12,4 +12,15 @@ export class HomePage {
 
   }
 
+  selectPic() {
+    this.navCtrl.push('SelectPicturePage');
+    // let opt = {
+    //   'selectMode': 100,
+    //   'maxSelectCount': 9,
+    // };
+    // (<any>window).MediaPicker.getMedias(opt).then(data => {
+    //   alert(JSON.stringify(data));
+    // })
+  }
+
 }
